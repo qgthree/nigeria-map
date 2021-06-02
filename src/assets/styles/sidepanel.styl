@@ -1,0 +1,66 @@
+@import settings
+
+.sidepanel
+  position fixed
+  width 150px
+  height 100%
+  top 0
+  padding-bottom 50px
+  background-color brandDark
+  -webkit-box-shadow 9px -2px 28px -12px rgba(0,0,0,0.75)
+  -moz-box-shadow 9px -2px 28px -12px rgba(0,0,0,0.75)
+  box-shadow 9px -2px 28px -12px rgba(0,0,0,0.75)
+  z-index 1000
+  .perfect-scrollbar
+    max-height 100%
+    padding 30px 0px
+    .sidepanel-button
+      border-left 3px solid transparent
+      color bgColor
+      width 100%
+      padding 0px 20px
+      height 50px
+      display grid
+      align-items center
+      text-align left
+      cursor pointer
+      font-size 14px
+      transition all 0.3s
+      text-transform uppercase
+      div
+        display flex
+        align-items center
+        .icon
+          width 24px
+          text-align center
+          margin-right 20px
+          font-size 24px
+          color #999
+          transition all 0.3s
+    .sidepanel-button:hover, .button_selected
+      padding-left 40px
+      div
+        .icon
+          color brandActive
+    .sidepanel-button:hover
+      color brandActive
+    .button_selected
+      color brandActive !important
+      cursor default
+    .sidepanel-button:before
+      content ""
+      display grid
+      position absolute
+      height 50px
+      width 3px
+      left 0
+      background-color brandActive
+      visibility hidden
+      -webkit-transform scaleY(0)
+      transform scaleY(0)
+      -webkit-transition all 0.2s ease-in-out 0s
+      transition all 0.2s ease-in-out 0s
+    .sidepanel-button.button_selected:before
+      visibility visible
+      -webkit-transform scaleY(1)
+      transform scaleY(1)

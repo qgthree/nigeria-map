@@ -1,0 +1,53 @@
+@import settings
+
+.desc-container
+  position fixed
+  width 500px
+  top 0px
+  height 100%
+  padding-bottom 50px
+  z-index 999
+  color fontColor
+  padding-left 150px
+  background-color bgColor
+  -webkit-box-shadow 0px -1px 43px -10px rgba(0,0,0,0.5)
+  -moz-box-shadow 0px -1px 43px -10px rgba(0,0,0,0.5)
+  box-shadow 0px -1px 43px -10px rgba(0,0,0,0.5)
+  .perfect-scrollbar
+    max-height 100%
+    padding 30px 20px
+    h2
+      font-size 22px
+      font-weight bold
+      text-align center
+      color brandDark
+      line-height 1.5
+      margin-bottom 20px
+    .desc_subtitle
+      color brandDark
+      margin-bottom 20px
+      padding-bottom 5px
+      display inline-block
+      font-style italic
+    .desc-award-list
+      min-height 500px
+      .desc-card
+        text-align left
+        margin-bottom 20px
+        border 1px solid #e6e6e6
+        border-left 3px solid brandNormal
+        border-radius 4px
+        padding 20px
+        transition all 0.3s
+        .desc-data
+          text-align left
+          margin-bottom 10px
+          .desc-data_label
+            font-style italic
+            text-transform uppercase
+            font-weight normal
+            font-size 14px
+            margin-right 5px
+          .desc-data_link
+            &:hover, &:active
+              text-decoration underline

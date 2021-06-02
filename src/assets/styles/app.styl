@@ -1,0 +1,84 @@
+@import settings
+
+/* fonts */
+@font-face
+  font-family "MuktaMalar"
+  src url(assets/fonts/MuktaMalar-Light.ttf)
+  font-weight 300
+
+@font-face
+  font-family "MuktaMalar"
+  src url(assets/fonts/MuktaMalar-Regular.ttf)
+  font-weight 400
+
+@font-face
+  font-family "MuktaMalar"
+  src url(assets/fonts/MuktaMalar-Medium.ttf)
+  font-weight 500
+
+@font-face
+  font-family "MuktaMalar"
+  src url(assets/fonts/MuktaMalar-SemiBold.ttf)
+  font-weight 600
+
+box-sizing(n)
+  -webkit-box-sizing n
+  -moz-box-sizing n
+  box-sizing n
+
+html
+  box-sizing border-box
+
+*,
+*:before,
+*:after
+  box-sizing inherit
+
+h2
+  margin: 0px
+
+a
+  text-decoration none
+  color linkColor
+
+p
+  text-align left
+
+body
+  margin 0
+  font-size 16px
+  font-weight 300
+  color fontColor
+  background-color bgColor
+
+#app
+  font-family 'MuktaMalar', Helvetica, Arial, sans-serif
+  -webkit-font-smoothing antialiased
+  -moz-osx-font-smoothing grayscale
+  text-align center
+  overflow hidden
+  width 100%
+
+.slide-fade-enter-active
+  transition all .3s ease
+.slide-fade-leave-active
+  transition all .3s ease
+.slide-fade-enter, .slide-fade-leave-to
+  transform translateX(-100%)
+
+.slide-fade-up-enter-active
+  transition all .2s ease
+.slide-fade-up-leave-active
+  transition all .2s ease
+.slide-fade-up-enter, .slide-fade-up-leave-to
+  transform translateY(100%)
+  opacity 0
+
+.desc-card-enter, .desc-card-leave-to
+/* .list-complete-leave-active below version 2.1.8 */ {
+  opacity 0
+  transform translateY(-50%)
+}
+.desc-card-leave-active {
+  position absolute
+}
