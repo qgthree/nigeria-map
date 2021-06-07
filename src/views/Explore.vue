@@ -3,6 +3,7 @@
     <WorldMap
       :settings="leafSettings"
       :states="states"
+      :lgas="lgas"
       :date="nav.date" />
     <MapMenu :nav="nav" />
     <transition name="slide-fade">
@@ -66,6 +67,7 @@ export default {
     ...mapState('BHAMap', ['leafSettings']),
     ...mapState('BHANav', [
       'states',
+      'lgas',
       'partners',
       'sectors',
       'nav'

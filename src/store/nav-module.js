@@ -1,4 +1,5 @@
 import states from '../assets/data/states.js'
+import lgas from '../assets/data/lgas.js'
 import awards from '../assets/data/awards.js'
 import sectors from '../assets/data/sectors.js'
 import partners from '../assets/data/partners.js'
@@ -10,6 +11,7 @@ export default {
     partners: partners,
     sectors: sectors,
     states: states,
+    lgas: lgas,
     dates: dates,
     nav: {
       type: null,

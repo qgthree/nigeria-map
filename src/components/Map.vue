@@ -11,6 +11,7 @@ export default {
   props: {
     settings: Object,
     states: Object,
+    lgas: Object,
     date: String
   },
   data () {
@@ -99,7 +100,11 @@ export default {
     },
     updateMap (map) {
       if (map.hasLayer(this.shapes)) { map.removeLayer(this.shapes) }
-      this.shapes = this.geoJSON
+      if (this.$route.meta.nav === 'prov' && this.$route.params.id) {
+        this.shapes = this.geoJSON
+      } else {
+        this.shapes = this.geoJSON
+      }
       this.shapes.addTo(map)
       map.setView(this.center, this.zoom)
     }

@@ -1,5 +1,6 @@
 export default {
   'type': 'FeatureCollection',
+  'id': 'nigeria-admin1',
   'crs': {
     'type': 'name',
     'properties': {
