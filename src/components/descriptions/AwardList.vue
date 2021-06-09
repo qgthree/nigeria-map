@@ -25,7 +25,7 @@
       <div class="award-table">
         <div class="award-table_labels">
           <div>SECTOR</div>
-          <div>PROVINCE(S)</div>
+          <div>STATE(S)</div>
           <div class="award-table_labels_amt">AMOUNT</div>
         </div>
         <div class="award-table_activity" v-for="{ sector, state, amount } in activities(Number)" :key="sector">

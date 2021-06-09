@@ -784,12 +784,7 @@ export default [{
   }, {
     'award': '72DFFP19GR00087',
     'sector': 'FOOD',
-    'amount': '16,869,496',
-    'state': ['Borno']
-  }, {
-    'award': '72DFFP19GR00087',
-    'sector': 'FOOD',
-    'amount': '23,231',
+    'amount': '16,892,727',
     'state': ['Borno']
   }]
 },
@@ -829,14 +824,8 @@ export default [{
   }, {
     'award': '72DFFP20GR000010',
     'sector': 'FOOD',
-    'amount': '13,737,241',
-    'state': ['Borno']
-  }, {
-    'award': '72DFFP20GR000010',
-    'sector': 'FOOD',
-    'amount': '508,089',
-    'state': ['Borno'],
-    'lgas': 'Gubio'
+    'amount': '14245330',
+    'state': ['Borno,']
   }]
 },
 {
@@ -850,12 +839,7 @@ export default [{
   activities: [{
     'award': '72DFFP20GR00025',
     'sector': 'FOOD',
-    'amount': '37,261,697',
-    'state': ['Borno']
-  }, {
-    'award': '72DFFP20GR00025',
-    'sector': 'FOOD',
-    'amount': '1,545,841',
+    'amount': '38,807,538',
     'state': ['Borno']
   }, {
     'award': '72DFFP20GR00025',
@@ -900,12 +884,7 @@ export default [{
   activities: [{
     'award': '72DFFP20GR00046',
     'sector': 'FOOD',
-    'amount': '2,541,395',
-    'state': ['Adamawa', 'Borno', 'Yobe']
-  }, {
-    'award': '72DFFP20GR00046',
-    'sector': 'FOOD',
-    'amount': '1,856,301',
+    'amount': '4,397,696',
     'state': ['Adamawa', 'Borno', 'Yobe']
   }]
 },

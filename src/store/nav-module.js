@@ -91,6 +91,10 @@ export default {
     activitiesBySector: (state, getters) => (sector) => {
       const activities = getters.awardsSubset.map(award => award.activities).flat(1)
       return activities.filter(activity => activity.sector === sector)
+    },
+    activitiesByProvince: (state, getters) => (province) => {
+      const activities = getters.awardsSubset.map(award => award.activities).flat(1)
+      return activities.filter(activity => activity.state.includes(province))
     }
   },
   mutations: {

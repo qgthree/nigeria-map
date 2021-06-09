@@ -23,7 +23,8 @@ export default {
   computed: {
     ...mapGetters('BHANav', [
       'activitiesBySector',
-      'activitiesByPartner'
+      'activitiesByPartner',
+      'activitiesByProvince'
     ]),
     state () {
       return this.states.features.find(item => item.properties.admin1Pcode === this.$route.params.id) || null
@@ -32,7 +33,8 @@ export default {
       return this.state ? [this.state.properties.Y, this.state.properties.X] : this.settings.countryCenter
     },
     zoom () { return this.state ? this.settings.stateZoom : this.settings.countryZoom },
-    geoJSON () { return L.geoJSON(this.states, this.options(this.states)) }
+    geoJSON () { return L.geoJSON(this.states, this.options(this.states)) },
+    geoJSON2 () { return L.geoJSON(this.lgas, this.options2(this.lgas)) }
   },
   methods: {
     activities (type, id) {
@@ -40,6 +42,8 @@ export default {
         return this.activitiesBySector(id)
       } else if (type === 'part') {
         return this.activitiesByPartner(id)
+      } else if (type === 'prov') {
+        return this.activitiesByProvince(id)
       } else return []
     },
     currentState (feature) {
@@ -85,23 +89,65 @@ export default {
               fillStyle = countrywideStyle
             }
           })
-          // highlight selected state; set hover events on all other states
-          if (self.currentState(feature)) {
-            layer.setStyle(activeStyle)
-          } else {
             layer.addEventListener('mouseover', () => { layer.setStyle({ fillOpacity: 0.35 }) })
             layer.addEventListener('mouseout', () => { layer.setStyle({ fillOpacity: fillStyle.fillOpacity }) })
             layer.addEventListener('click', function () {
               self.$router.push({ name: 'state', params: { id: feature.properties.admin1Pcode } })
             })
+        }
+      }
+    },
+    options2 () {
+      const self = this
+      const highlight = this.settings.colors.highlight
+      const active = this.settings.colors.active
+      const noStyle = {
+        opacity: 0,
+        fillColor: highlight,
+        fillOpacity: 0
+      }
+      const activeStyle = {
+        weight: 1,
+        color: highlight,
+        opacity: 0.6,
+        fillColor: active,
+        fillOpacity: 0.6
+      }
+      const countrywideStyle = {
+        weight: 1,
+        color: highlight,
+        opacity: 0.6,
+        fillColor: active,
+        fillOpacity: 0.15
+      }
+      return {
+        style () {
+          return noStyle
+        },
+        onEachFeature (feature, layer) {
+          let fillStyle = noStyle
+          if (feature.properties.admin1Pcode === self.$route.params.id) {
+            layer.setStyle(countrywideStyle)
+            fillStyle = countrywideStyle
+            // set hover events on all states
+            layer.bindTooltip(feature.properties.admin2Name_en)
+            layer.addEventListener('mouseover', () => { layer.setStyle({ fillOpacity: 0.35 }) })
+            layer.addEventListener('mouseout', () => { layer.setStyle({ fillOpacity: fillStyle.fillOpacity }) })
           }
+          // Look at each activity. If the activity occurs in this state, highlight the state.
+          self.activities(self.$route.meta.nav, feature.properties.admin1Name_en).map(activity => {
+            if (activity.lgas && activity.lgas.includes(feature.properties.admin2Name_en) && feature.properties.admin1Pcode === self.$route.params.id) {
+              layer.setStyle(activeStyle)
+              fillStyle = activeStyle
+            }
+          })
         }
       }
     },
     updateMap (map) {
       if (map.hasLayer(this.shapes)) { map.removeLayer(this.shapes) }
       if (this.$route.meta.nav === 'prov' && this.$route.params.id) {
-        this.shapes = this.geoJSON
+        this.shapes = this.geoJSON2
       } else {
         this.shapes = this.geoJSON
       }
