@@ -6,7 +6,7 @@ export default {
       // eslint-disable-next-line
       countryCenter: [9.1, 8.66],
       countryZoom: 6.2,
-      stateZoom: 7,
+      stateZoom: 7.6,
       minZoom: 2.5,
       maxZoom: 9,
       colors: {

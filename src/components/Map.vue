@@ -37,26 +37,23 @@ export default {
     geoJSON2 () { return L.geoJSON(this.lgas, this.options2(this.lgas)) }
   },
   methods: {
-    activities (type, id) {
+    activities () {
+      const type = this.$route.meta.nav
+      const id = this.$route.params.id
       if (type === 'sect') {
         return this.activitiesBySector(id)
       } else if (type === 'part') {
         return this.activitiesByPartner(id)
-      } else if (type === 'prov') {
+      } else if (type === 'prov' && id) {
         return this.activitiesByProvince(id)
       } else return []
-    },
-    currentState (feature) {
-      if (this.state && feature.properties.admin1Pcode === this.state.properties.admin1Pcode) {
-        return true
-      }
     },
     options () {
       const self = this
       const highlight = this.settings.colors.highlight
       const active = this.settings.colors.active
       const normalStyle = {
-        weight: 1,
+        weight: 0.8,
         color: highlight,
         opacity: 0.4,
         fillColor: highlight,
@@ -80,7 +77,7 @@ export default {
           let fillStyle = normalStyle
           layer.bindTooltip(feature.properties.admin1Name_en)
           // Look at each activity. If the activity occurs in this state, highlight the state.
-          self.activities(self.$route.meta.nav, self.$route.params.id).map(activity => {
+          self.activities().map(activity => {
             if (activity.state.includes(feature.properties.admin1Name_en)) {
               layer.setStyle(activeStyle)
               fillStyle = activeStyle
@@ -102,19 +99,20 @@ export default {
       const highlight = this.settings.colors.highlight
       const active = this.settings.colors.active
       const noStyle = {
+        weight: 0,
         opacity: 0,
         fillColor: highlight,
         fillOpacity: 0
       }
       const activeStyle = {
-        weight: 1,
+        weight: 0.8,
         color: highlight,
         opacity: 0.6,
         fillColor: active,
         fillOpacity: 0.6
       }
-      const countrywideStyle = {
-        weight: 1,
+      const statewideStyle = {
+        weight: 0.8,
         color: highlight,
         opacity: 0.6,
         fillColor: active,
@@ -126,21 +124,27 @@ export default {
         },
         onEachFeature (feature, layer) {
           let fillStyle = noStyle
-          if (feature.properties.admin1Pcode === self.$route.params.id) {
-            layer.setStyle(countrywideStyle)
-            fillStyle = countrywideStyle
-            // set hover events on all states
-            layer.bindTooltip(feature.properties.admin2Name_en)
+          const thisState = self.$route.params.id === feature.properties.admin1Pcode
+          const sectorActivity = self.activities().some(activity => activity.lgas.includes(feature.properties.admin2Name_en))
+
+          if (thisState) {
+            layer.setStyle(statewideStyle)
+            fillStyle = statewideStyle
+            layer.bindTooltip(
+              '<span class="tip-title">' + feature.properties.admin2Name_en + '</span>' +
+              '<br/>' +
+              '<span class="tip-pop">Pop: ' + feature.properties.Population2016.toLocaleString() + '</span>'
+            )
+            // highlight selected state; set hover events on all other states
             layer.addEventListener('mouseover', () => { layer.setStyle({ fillOpacity: 0.35 }) })
             layer.addEventListener('mouseout', () => { layer.setStyle({ fillOpacity: fillStyle.fillOpacity }) })
           }
-          // Look at each activity. If the activity occurs in this state, highlight the state.
-          self.activities(self.$route.meta.nav, feature.properties.admin1Name_en).map(activity => {
-            if (activity.lgas && activity.lgas.includes(feature.properties.admin2Name_en) && feature.properties.admin1Pcode === self.$route.params.id) {
-              layer.setStyle(activeStyle)
-              fillStyle = activeStyle
-            }
-          })
+
+          // Look at each activity. If the activity occurs in this lga, highlight the lga.
+          if (thisState && sectorActivity) {
+            layer.setStyle(activeStyle)
+            fillStyle = activeStyle
+          }
         }
       }
     },
@@ -174,6 +178,15 @@ export default {
 
 <style lang="stylus">
 @import "../../node_modules/leaflet/dist/leaflet.css";
+.leaflet-tooltip
+  font-size 14px
+  text-align left
+  text-transform none
+
+.tip-pop
+  font-weight normal
+  font-style italic !important
+
 .leaflet-bottom.leaflet-right
   display none
 
