@@ -1,5 +1,5 @@
 import states from '../assets/data/states.js'
-import lgas from '../assets/data/lgapop.js'
+import lgas from '../assets/data/lgas.js'
 import awards from '../assets/data/awards.js'
 import sectors from '../assets/data/sectors.js'
 import partners from '../assets/data/partners.js'
@@ -95,7 +95,7 @@ export default {
     activitiesByProvince: (state, getters) => (province) => {
       const prov = state.states.features.find(item => item.properties.admin1Pcode === province)
       const activities = getters.awardsSubset.map(award => award.activities).flat(1)
-      return activities.filter(activity => activity.lgas && activity.state.includes(prov.properties.admin1Name_en))
+      return activities.filter(activity => activity.state.includes(prov.properties.admin1Name_en) || activity.state.includes('Countrywide'))
     }
   },
   mutations: {

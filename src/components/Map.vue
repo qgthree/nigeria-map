@@ -34,9 +34,19 @@ export default {
     },
     zoom () { return this.state ? this.settings.stateZoom : this.settings.countryZoom },
     geoJSON () { return L.geoJSON(this.states, this.options(this.states)) },
-    geoJSON2 () { return L.geoJSON(this.lgas, this.options2(this.lgas)) }
+    geoJSON2 () {
+      return L.geoJSON(
+        this.lgaSubset(),
+        this.options2(this.lgaSubset())
+      )
+    }
   },
   methods: {
+    lgaSubset () {
+      const lgafeatures = this.lgas.features.filter(lga => lga.properties.admin1Pcode === this.$route.params.id)
+      const subset = { type: this.lgas.type, features: lgafeatures }
+      return subset
+    },
     activities () {
       const type = this.$route.meta.nav
       const id = this.$route.params.id
@@ -75,7 +85,11 @@ export default {
         },
         onEachFeature (feature, layer) {
           let fillStyle = normalStyle
-          layer.bindTooltip(feature.properties.admin1Name_en)
+          layer.bindTooltip(
+            '<span class="tip-title">' + feature.properties.admin1Name_en + '</span>' +
+            '<br/>' +
+            '<span class="tip-pop">Pop. ' + feature.properties.SUM_Population2016.toLocaleString() + '</span>'
+          )
           // Look at each activity. If the activity occurs in this state, highlight the state.
           self.activities().map(activity => {
             if (activity.state.includes(feature.properties.admin1Name_en)) {
@@ -123,25 +137,36 @@ export default {
           return noStyle
         },
         onEachFeature (feature, layer) {
-          let fillStyle = noStyle
-          const thisState = self.$route.params.id === feature.properties.admin1Pcode
-          const sectorActivity = self.activities().some(activity => activity.lgas.includes(feature.properties.admin2Name_en))
+          // set general style
+          layer.setStyle(statewideStyle)
+          let fillStyle = statewideStyle
 
-          if (thisState) {
-            layer.setStyle(statewideStyle)
-            fillStyle = statewideStyle
-            layer.bindTooltip(
-              '<span class="tip-title">' + feature.properties.admin2Name_en + '</span>' +
-              '<br/>' +
-              '<span class="tip-pop">Pop: ' + feature.properties.Population2016.toLocaleString() + '</span>'
-            )
-            // highlight selected state; set hover events on all other states
-            layer.addEventListener('mouseover', () => { layer.setStyle({ fillOpacity: 0.35 }) })
-            layer.addEventListener('mouseout', () => { layer.setStyle({ fillOpacity: fillStyle.fillOpacity }) })
+          let sectors = () => {
+            let sectorList = []
+            self.activities().map((activity) => {
+              if (!activity.lgas || activity.lgas.includes(feature.properties.admin2Name_en)) {
+                sectorList.push(activity.sector)
+              }
+            })
+            return Array.from(new Set(sectorList))
           }
 
+          // add tooltip
+          layer.bindTooltip(
+            '<span class="tip-title">' + feature.properties.admin2Name_en + '</span>' +
+            '<br/>' +
+            '<span class="tip-pop">Pop. ' + feature.properties.Population2016.toLocaleString() + '</span>' +
+            '<br/>' +
+            sectors()
+          )
+
+          // highlight selected state; set hover events on all other states
+          layer.addEventListener('mouseover', () => { layer.setStyle({ fillOpacity: 0.35 }) })
+          layer.addEventListener('mouseout', () => { layer.setStyle({ fillOpacity: fillStyle.fillOpacity }) })
+
           // Look at each activity. If the activity occurs in this lga, highlight the lga.
-          if (thisState && sectorActivity) {
+          const sectorActivity = self.activities().some(activity => activity.lgas && activity.lgas.includes(feature.properties.admin2Name_en))
+          if (sectorActivity) {
             layer.setStyle(activeStyle)
             fillStyle = activeStyle
           }
