@@ -37,6 +37,26 @@ export default new Router({
           ]
         },
         {
+          path: '/sectors/',
+          name: 'sectors',
+          component: Explore,
+          meta: {
+            title: '',
+            nav: 'sect'
+          },
+          children: [
+            {
+              path: '/sectors/:id',
+              name: 'sector',
+              component: Explore,
+              meta: {
+                title: '',
+                nav: 'sect'
+              }
+            }
+          ]
+        },
+        {
           path: '/states/',
           name: 'states',
           component: Explore,
@@ -57,21 +77,21 @@ export default new Router({
           ]
         },
         {
-          path: '/sectors/',
-          name: 'sectors',
+          path: '/lgas/',
+          name: 'lgas',
           component: Explore,
           meta: {
             title: '',
-            nav: 'sect'
+            nav: 'lga'
           },
           children: [
             {
-              path: '/sectors/:id',
-              name: 'sector',
+              path: '/lgas/:id',
+              name: 'lga',
               component: Explore,
               meta: {
                 title: '',
-                nav: 'sect'
+                nav: 'lga'
               }
             }
           ]

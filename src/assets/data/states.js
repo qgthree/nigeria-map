@@ -3739,10 +3739,12 @@ export default {
         'OBJECTID' : 1,
         'admin1Name_en' : 'Abia',
         'admin1Pcode' : 'NG001',
+        'admin1RefName' : 'Abia',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 3644714,
+        'admin0Pcode' : 'NG',
         'X' : 7.5231899820000798,
         'Y' : 5.4533021190000568,
+        'Pop2020' : 3878977,
         'Shape_Length' : 4.6951354298395813,
         'Shape_Area' : 0.39654290480092863
       }
@@ -9673,10 +9675,12 @@ export default {
         'OBJECTID' : 2,
         'admin1Name_en' : 'Adamawa',
         'admin1Pcode' : 'NG002',
+        'admin1RefName' : 'Adamawa',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4145684,
+        'admin0Pcode' : 'NG',
         'X' : 12.400240776,
         'Y' : 9.3232273320000445,
+        'Pop2020' : 4396599,
         'Shape_Length' : 11.525442519622773,
         'Shape_Area' : 3.1130065092724326
       }
@@ -16369,10 +16373,12 @@ export default {
         'OBJECTID' : 3,
         'admin1Name_en' : 'Akwa Ibom',
         'admin1Pcode' : 'NG003',
+        'admin1RefName' : 'Akwa Ibom',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 5353609,
+        'admin0Pcode' : 'NG',
         'X' : 7.8463949280000502,
         'Y' : 4.9072450260000551,
+        'Pop2020' : 5665764,
         'Shape_Length' : 5.2638299746554011,
         'Shape_Area' : 0.54947615359367408
       }
@@ -17947,10 +17953,12 @@ export default {
         'OBJECTID' : 4,
         'admin1Name_en' : 'Anambra',
         'admin1Pcode' : 'NG004',
+        'admin1RefName' : 'Anambra',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 5425334,
+        'admin0Pcode' : 'NG',
         'X' : 6.9321860880000399,
         'Y' : 6.2227758760000711,
+        'Pop2020' : 5936784,
         'Shape_Length' : 3.595959814797554,
         'Shape_Area' : 0.39266075919866605
       }
@@ -25741,10 +25749,12 @@ export default {
         'OBJECTID' : 5,
         'admin1Name_en' : 'Bauchi',
         'admin1Pcode' : 'NG005',
+        'admin1RefName' : 'Bauchi',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 6386388,
+        'admin0Pcode' : 'NG',
         'X' : 9.8761723570000299,
         'Y' : 10.301635852000061,
+        'Pop2020' : 6690134,
         'Shape_Length' : 13.952005061013681,
         'Shape_Area' : 4.0110175348580128
       }
@@ -28239,10 +28249,12 @@ export default {
         'OBJECTID' : 6,
         'admin1Name_en' : 'Bayelsa',
         'admin1Pcode' : 'NG006',
+        'admin1RefName' : 'Bayelsa',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 2228965,
+        'admin0Pcode' : 'NG',
         'X' : 6.0804176680000497,
         'Y' : 4.7663153930000703,
+        'Pop2020' : 2537774,
         'Shape_Length' : 5.0467084416581773,
         'Shape_Area' : 0.77676790557799802
       }
@@ -31361,10 +31373,12 @@ export default {
         'OBJECTID' : 7,
         'admin1Name_en' : 'Benue',
         'admin1Pcode' : 'NG007',
+        'admin1RefName' : 'Benue',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 5568946,
+        'admin0Pcode' : 'NG',
         'X' : 8.7519079510000193,
         'Y' : 7.3410860580000303,
+        'Pop2020' : 5814928,
         'Shape_Length' : 9.4080802362682707,
         'Shape_Area' : 2.5783632597109531
       }
@@ -40415,10 +40429,12 @@ export default {
         'OBJECTID' : 8,
         'admin1Name_en' : 'Borno',
         'admin1Pcode' : 'NG008',
+        'admin1RefName' : 'Borno',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 5669054,
+        'admin0Pcode' : 'NG',
         'X' : 13.153346985000001,
         'Y' : 11.888980100000026,
+        'Pop2020' : 6594992,
         'Shape_Length' : 13.714363764233529,
         'Shape_Area' : 5.9878487145958008
       }
@@ -47907,10 +47923,12 @@ export default {
         'OBJECTID' : 9,
         'admin1Name_en' : 'Cross River',
         'admin1Pcode' : 'NG009',
+        'admin1RefName' : 'Cross River',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 3780419,
+        'admin0Pcode' : 'NG',
         'X' : 8.5991060080000405,
         'Y' : 5.8745645850000301,
+        'Pop2020' : 3958265,
         'Shape_Length' : 8.7797958568813783,
         'Shape_Area' : 1.7112182413769654
       }
@@ -51089,10 +51107,12 @@ export default {
         'OBJECTID' : 10,
         'admin1Name_en' : 'Delta',
         'admin1Pcode' : 'NG010',
+        'admin1RefName' : 'Delta',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 5502806,
+        'admin0Pcode' : 'NG',
         'X' : 5.87663057200007,
         'Y' : 5.4997090750000552,
+        'Pop2020' : 5827726,
         'Shape_Length' : 7.3725263882501775,
         'Shape_Area' : 1.3940820062535684
       }
@@ -52975,10 +52995,12 @@ export default {
         'OBJECTID' : 11,
         'admin1Name_en' : 'Ebonyi',
         'admin1Pcode' : 'NG011',
+        'admin1RefName' : 'Ebonyi',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 2819675,
+        'admin0Pcode' : 'NG',
         'X' : 8.0162662630000305,
         'Y' : 6.2620272490000275,
+        'Pop2020' : 2983133,
         'Shape_Length' : 4.489355089389651,
         'Shape_Area' : 0.51804959578197529
       }
@@ -57121,10 +57143,12 @@ export default {
         'OBJECTID' : 12,
         'admin1Name_en' : 'Edo',
         'admin1Pcode' : 'NG012',
+        'admin1RefName' : 'Edo',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4138994,
+        'admin0Pcode' : 'NG',
         'X' : 5.9302146600000496,
         'Y' : 6.6335372640000401,
+        'Pop2020' : 4393070,
         'Shape_Length' : 7.8894251509869466,
         'Shape_Area' : 1.5958086141970711
       }
@@ -58671,10 +58695,12 @@ export default {
         'OBJECTID' : 13,
         'admin1Name_en' : 'Ekiti',
         'admin1Pcode' : 'NG013',
+        'admin1RefName' : 'Ekiti',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 3174006,
+        'admin0Pcode' : 'NG',
         'X' : 5.3095155260000402,
         'Y' : 7.7200804040000435,
+        'Pop2020' : 3510952,
         'Shape_Length' : 3.3956332279322048,
         'Shape_Area' : 0.4716337216762167
       }
@@ -60053,10 +60079,12 @@ export default {
         'OBJECTID' : 14,
         'admin1Name_en' : 'Enugu',
         'admin1Pcode' : 'NG014',
+        'admin1RefName' : 'Enugu',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4299281,
+        'admin0Pcode' : 'NG',
         'X' : 7.44061116300003,
         'Y' : 6.5362448960000279,
+        'Pop2020' : 4415727,
         'Shape_Length' : 4.3198929568096194,
         'Shape_Area' : 0.62432294676536493
       }
@@ -60391,10 +60419,12 @@ export default {
         'OBJECTID' : 15,
         'admin1Name_en' : 'Federal Capital Territory',
         'admin1Pcode' : 'NG015',
+        'admin1RefName' : 'Federal Capital Territory',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 2996670,
+        'admin0Pcode' : 'NG',
         'X' : 7.2541980460000604,
         'Y' : 8.8255906400000299,
+        'Pop2020' : 4834747,
         'Shape_Length' : 3.4984121670288837,
         'Shape_Area' : 0.6072218061321345
       }
@@ -63029,10 +63059,12 @@ export default {
         'OBJECTID' : 16,
         'admin1Name_en' : 'Gombe',
         'admin1Pcode' : 'NG016',
+        'admin1RefName' : 'Gombe',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 3160494,
+        'admin0Pcode' : 'NG',
         'X' : 11.191995137999999,
         'Y' : 10.383587852000062,
+        'Pop2020' : 3392445,
         'Shape_Length' : 5.9552860462863917,
         'Shape_Area' : 1.4387466366520381
       }
@@ -65595,10 +65627,12 @@ export default {
         'OBJECTID' : 17,
         'admin1Name_en' : 'Imo',
         'admin1Pcode' : 'NG017',
+        'admin1RefName' : 'Imo',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 5283288,
+        'admin0Pcode' : 'NG',
         'X' : 7.0623075910000397,
         'Y' : 5.5730200200000581,
+        'Pop2020' : 5547527,
         'Shape_Length' : 2.8780877784316976,
         'Shape_Area' : 0.41409740100210241
       }
@@ -75017,10 +75051,12 @@ export default {
         'OBJECTID' : 18,
         'admin1Name_en' : 'Jigawa',
         'admin1Pcode' : 'NG018',
+        'admin1RefName' : 'Jigawa',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 5690516,
+        'admin0Pcode' : 'NG',
         'X' : 9.5635582830000807,
         'Y' : 12.238420416000054,
+        'Pop2020' : 5921830,
         'Shape_Length' : 11.771496756149913,
         'Shape_Area' : 1.9288728952615222
       }
@@ -81711,10 +81747,12 @@ export default {
         'OBJECTID' : 19,
         'admin1Name_en' : 'Kaduna',
         'admin1Pcode' : 'NG019',
+        'admin1RefName' : 'Kaduna',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 8007205,
+        'admin0Pcode' : 'NG',
         'X' : 7.70597854800008,
         'Y' : 10.392367011000033,
+        'Pop2020' : 8758047,
         'Shape_Length' : 12.613678137949012,
         'Shape_Area' : 3.6456386902574343
       }
@@ -87325,10 +87363,12 @@ export default {
         'OBJECTID' : 20,
         'admin1Name_en' : 'Kano',
         'admin1Pcode' : 'NG020',
+        'admin1RefName' : 'Kano',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 12706778,
+        'admin0Pcode' : 'NG',
         'X' : 8.5295571830000707,
         'Y' : 11.745201935000068,
+        'Pop2020' : 13612130,
         'Shape_Length' : 8.2441954162689832,
         'Shape_Area' : 1.6856069027493266
       }
@@ -92139,10 +92179,12 @@ export default {
         'OBJECTID' : 21,
         'admin1Name_en' : 'Katsina',
         'admin1Pcode' : 'NG021',
+        'admin1RefName' : 'Katsina',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 7645575,
+        'admin0Pcode' : 'NG',
         'X' : 7.6288342050000297,
         'Y' : 12.37830070800004,
+        'Pop2020' : 8050462,
         'Shape_Length' : 9.1056370870216359,
         'Shape_Area' : 1.9919473987289626
       }
@@ -96521,10 +96563,12 @@ export default {
         'OBJECTID' : 22,
         'admin1Name_en' : 'Kebbi',
         'admin1Pcode' : 'NG022',
+        'admin1RefName' : 'Kebbi',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4311454,
+        'admin0Pcode' : 'NG',
         'X' : 4.1617225480000597,
         'Y' : 12.138429175000056,
+        'Pop2020' : 4510474,
         'Shape_Length' : 14.968980716393913,
         'Shape_Area' : 3.0352270358629037
       }
@@ -99855,10 +99899,12 @@ export default {
         'OBJECTID' : 23,
         'admin1Name_en' : 'Kogi',
         'admin1Pcode' : 'NG023',
+        'admin1RefName' : 'Kogi',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4327246,
+        'admin0Pcode' : 'NG',
         'X' : 6.5786704820000601,
         'Y' : 7.8031854510000471,
+        'Pop2020' : 4836724,
         'Shape_Length' : 10.476382991513956,
         'Shape_Area' : 2.3688823019483349
       }
@@ -102821,10 +102867,12 @@ export default {
         'OBJECTID' : 24,
         'admin1Name_en' : 'Kwara',
         'admin1Pcode' : 'NG024',
+        'admin1RefName' : 'Kwara',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 3129582,
+        'admin0Pcode' : 'NG',
         'X' : 3.59936704400008,
         'Y' : 9.4556920430000559,
+        'Pop2020' : 3378707,
         'Shape_Length' : 12.046963127610672,
         'Shape_Area' : 2.7662444435041298
       }
@@ -105059,10 +105107,12 @@ export default {
         'OBJECTID' : 25,
         'admin1Name_en' : 'Lagos',
         'admin1Pcode' : 'NG025',
+        'admin1RefName' : 'Lagos',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 12102238,
+        'admin0Pcode' : 'NG',
         'X' : 3.5869749000000302,
         'Y' : 6.5224243300000353,
+        'Pop2020' : 14879754,
         'Shape_Length' : 4.2877698800459321,
         'Shape_Area' : 0.30016567481858847
       }
@@ -108281,10 +108331,12 @@ export default {
         'OBJECTID' : 26,
         'admin1Name_en' : 'Nasarawa',
         'admin1Pcode' : 'NG026',
+        'admin1RefName' : 'Nasarawa',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 2459321,
+        'admin0Pcode' : 'NG',
         'X' : 8.1979625590000804,
         'Y' : 8.5104473500000495,
+        'Pop2020' : 2557000,
         'Shape_Length' : 9.5371878347728085,
         'Shape_Area' : 2.1979271553062789
       }
@@ -114479,10 +114531,12 @@ export default {
         'OBJECTID' : 27,
         'admin1Name_en' : 'Niger',
         'admin1Pcode' : 'NG027',
+        'admin1RefName' : 'Niger',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 5394631,
+        'admin0Pcode' : 'NG',
         'X' : 5.59043485800004,
         'Y' : 9.9332263410000223,
+        'Pop2020' : 5745269,
         'Shape_Length' : 18.92155899274055,
         'Shape_Area' : 5.9309563693518896
       }
@@ -121301,10 +121355,12 @@ export default {
         'OBJECTID' : 28,
         'admin1Name_en' : 'Ogun',
         'admin1Pcode' : 'NG028',
+        'admin1RefName' : 'Ogun',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 5048351,
+        'admin0Pcode' : 'NG',
         'X' : 3.4732617760000699,
         'Y' : 6.9951351010000735,
+        'Pop2020' : 5854055,
         'Shape_Length' : 9.6497738355187934,
         'Shape_Area' : 1.3640210966444273
       }
@@ -126275,10 +126331,12 @@ export default {
         'OBJECTID' : 29,
         'admin1Name_en' : 'Ondo',
         'admin1Pcode' : 'NG029',
+        'admin1RefName' : 'Ondo',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4541779,
+        'admin0Pcode' : 'NG',
         'X' : 5.1925749760000599,
         'Y' : 7.1047737220000613,
+        'Pop2020' : 4673409,
         'Shape_Length' : 7.7511087623623274,
         'Shape_Area' : 1.233546336522199
       }
@@ -128865,10 +128923,12 @@ export default {
         'OBJECTID' : 30,
         'admin1Name_en' : 'Osun',
         'admin1Pcode' : 'NG030',
+        'admin1RefName' : 'Osun',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4596693,
+        'admin0Pcode' : 'NG',
         'X' : 4.5177622700000502,
         'Y' : 7.5629185190000499,
+        'Pop2020' : 4828740,
         'Shape_Length' : 4.6601397409367351,
         'Shape_Area' : 0.70454935725638701
       }
@@ -132795,10 +132855,12 @@ export default {
         'OBJECTID' : 31,
         'admin1Name_en' : 'Oyo',
         'admin1Pcode' : 'NG031',
+        'admin1RefName' : 'Oyo',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 7636122,
+        'admin0Pcode' : 'NG',
         'X' : 3.6129116250000402,
         'Y' : 8.1588268110000399,
+        'Pop2020' : 8470586,
         'Shape_Length' : 8.6245855148512351,
         'Shape_Area' : 2.2649176790474117
       }
@@ -137333,10 +137395,12 @@ export default {
         'OBJECTID' : 32,
         'admin1Name_en' : 'Plateau',
         'admin1Pcode' : 'NG032',
+        'admin1RefName' : 'Plateau',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4088038,
+        'admin0Pcode' : 'NG',
         'X' : 9.5968432900000398,
         'Y' : 8.9615299770000547,
+        'Pop2020' : 4350632,
         'Shape_Length' : 8.5755268852150195,
         'Shape_Area' : 2.1809956344399373
       }
@@ -140123,10 +140187,12 @@ export default {
         'OBJECTID' : 33,
         'admin1Name_en' : 'Rivers',
         'admin1Pcode' : 'NG033',
+        'admin1RefName' : 'Rivers',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 7081412,
+        'admin0Pcode' : 'NG',
         'X' : 6.9181814550000196,
         'Y' : 4.8453923150000264,
+        'Pop2020' : 7840763,
         'Shape_Length' : 5.814545021215527,
         'Shape_Area' : 0.83019551532729452
       }
@@ -142713,10 +142779,12 @@ export default {
         'OBJECTID' : 34,
         'admin1Name_en' : 'Sokoto',
         'admin1Pcode' : 'NG034',
+        'admin1RefName' : 'Sokoto',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4879641,
+        'admin0Pcode' : 'NG',
         'X' : 5.3188104730000401,
         'Y' : 13.037993368000059,
+        'Pop2020' : 5027130,
         'Shape_Length' : 10.503158644081399,
         'Shape_Area' : 2.6795467004899605
       }
@@ -147747,10 +147815,12 @@ export default {
         'OBJECTID' : 35,
         'admin1Name_en' : 'Taraba',
         'admin1Pcode' : 'NG035',
+        'admin1RefName' : 'Taraba',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 2984174,
+        'admin0Pcode' : 'NG',
         'X' : 10.509574974,
         'Y' : 7.9439462790000448,
+        'Pop2020' : 3046503,
         'Shape_Length' : 13.696255113356184,
         'Shape_Area' : 4.8024738125612645
       }
@@ -153949,10 +154019,12 @@ export default {
         'OBJECTID' : 36,
         'admin1Name_en' : 'Yobe',
         'admin1Pcode' : 'NG036',
+        'admin1RefName' : 'Yobe',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 3197296,
+        'admin0Pcode' : 'NG',
         'X' : 11.4370658400001,
         'Y' : 12.298680221000041,
+        'Pop2020' : 3619142,
         'Shape_Length' : 11.096936797488054,
         'Shape_Area' : 3.726688294429783
       }
@@ -157415,10 +157487,12 @@ export default {
         'OBJECTID' : 37,
         'admin1Name_en' : 'Zamfara',
         'admin1Pcode' : 'NG037',
+        'admin1RefName' : 'Zamfara',
         'admin0Name_en' : 'Nigeria',
-        'SUM_Population2016' : 4376911,
+        'admin0Pcode' : 'NG',
         'X' : 6.2465347460000702,
         'Y' : 12.101504810000051,
+        'Pop2020' : 4568319,
         'Shape_Length' : 9.4661440548448805,
         'Shape_Area' : 2.7828554615017191
       }

@@ -39,6 +39,21 @@ export default {
       })
       return dateList
     },
+    lgaSort: state => {
+      let lgas = state.lgas.features
+      return lgas.sort((a, b) => {
+        var nameA = a.properties.admin2Name_en.toUpperCase(); // ignore upper and lowercase
+        var nameB = b.properties.admin2Name_en.toUpperCase(); // ignore upper and lowercase
+        if (nameA < nameB) {
+          return -1;
+        }
+        if (nameA > nameB) {
+          return 1;
+        }
+        // names must be equal
+        return 0;
+      });
+    },
     awardsSubset: state => {
       const subset = []
       state.awards.map(award => {
@@ -73,6 +88,9 @@ export default {
     state: (state) => () => {
       return state.states.features.find(item => item.properties.admin1Pcode === state.nav.id)
     },
+    lga: (state) => () => {
+      return state.lgas.features.find(item => item.properties.admin2Pcode === state.nav.id)
+    },
     // for descriptions
     awardsByPartner: (state, getters) => (partner) => {
       return getters.awardsSubset.filter(award => award.Partner_Code === partner)
@@ -82,6 +100,9 @@ export default {
     },
     awardsByState: (state, getters) => (state) => {
       return getters.awardsSubset.filter(award => award.activities.some(activity => activity.state.includes(state) || activity.state.includes('Countrywide')))
+    },
+    awardsByLGA: (state, getters) => (lga) => {
+      return getters.awardsSubset.filter(award => award.activities.some(activity => (activity.lgas && activity.lgas.includes(lga)) || activity.state.includes('Countrywide')))
     },
     // for map
     activitiesByPartner: (state, getters) => (partner) => {

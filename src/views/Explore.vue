@@ -16,12 +16,15 @@
       <StatesPanel v-if="nav.type === 'prov'"
         :states="states.features"
         :nav="nav" />
+      <LGAsPanel v-if="nav.type === 'lga'"
+        :nav="nav" />
     </transition>
     <transition name="slide-fade">
       <HomeDesc v-if="nav.type === 'exp'" />
       <PartnerDesc v-if="partner()" :partner="partner()" />
       <SectorDesc v-if="sector()" :sector="sector()" />
       <StateDesc v-if="state()" :state="state()" />
+      <LGADesc v-if="lga()" :lga="lga()" />
     </transition>
     <transition name="slide-fade-up">
       <Timeline v-if="id !== null" :dates="dateList" />
@@ -43,10 +46,12 @@ import WorldMap from '@/components/Map.vue'
 import PartnersPanel from '@/components/panels/PartnersPanel.vue'
 import SectorsPanel from '@/components/panels/SectorsPanel.vue'
 import StatesPanel from '@/components/panels/StatesPanel.vue'
+import LGAsPanel from '@/components/panels/LGAsPanel.vue'
 import HomeDesc from '@/components/descriptions/HomeDesc.vue'
 import PartnerDesc from '@/components/descriptions/PartnerDesc'
 import SectorDesc from '@/components/descriptions/SectorDesc'
 import StateDesc from '@/components/descriptions/StateDesc'
+import LGADesc from '@/components/descriptions/LGADesc'
 
 export default {
   name: 'Explore',
@@ -55,10 +60,12 @@ export default {
     PartnersPanel,
     SectorsPanel,
     StatesPanel,
+    LGAsPanel,
     HomeDesc,
     PartnerDesc,
     SectorDesc,
     StateDesc,
+    LGADesc,
     MapMenu,
     Timeline,
     DateSelector
@@ -73,9 +80,10 @@ export default {
       'nav'
     ]),
     ...mapGetters('BHANav', [
+      'partner',
       'sector',
       'state',
-      'partner',
+      'lga',
       'dateList'
     ]),
     type () {

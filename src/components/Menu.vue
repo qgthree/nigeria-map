@@ -22,7 +22,13 @@
       v-tooltip.bottom="{ content: 'States', trigger: 'hover' }"
       :class="{ button_selected: selected('prov') }"
       :to="{name: 'states'}">
-      <span class="menu-box-icon humanitarian-icon-Location"></span>
+      <span class="menu-box-icon humanitarian-icon-Location"></span> 1
+    </router-link>
+    <router-link class="menu-box"
+      v-tooltip.bottom="{ content: 'LGAs', trigger: 'hover' }"
+      :class="{ button_selected: selected('lga') }"
+      :to="{name: 'lgas'}">
+      <span class="menu-box-icon humanitarian-icon-Location"></span> 2
     </router-link>
   </div>
 </template>
@@ -50,9 +56,9 @@ export default {
   top 15px
   right 15px
   height 50px
-  width 250px
+  width 325px
   display grid
-  grid-template-columns 1fr 1fr 1fr 1fr
+  grid-template-columns 1fr 1fr 1fr 1fr 1fr
   padding 0px 20px
   background-color brandNormal
   border-radius 4px

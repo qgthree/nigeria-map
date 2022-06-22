@@ -61,7 +61,7 @@
             </span>
           </div>
           <div class="award-table_activity_amt">
-            <span v-if="amount">{{ amount }}</span>
+            <span v-if="amount">{{ amount.toLocaleString('en') }}</span>
           </div>
         </div>
         <div class="award-table_summary">
@@ -105,11 +105,11 @@ export default {
     TotalAmt (awardNumber) {
       const award = this.awards.find(award => award.Number === awardNumber)
       if (award.total) {
-        return '$' + award.total
+        return '$' + award.total.toLocaleString('en')
       } else if (!award.activities || !award.activities.find(activity => activity.amount)) {
         return 'n/a'
       } else {
-        const allocated = award.activities.map(activity => parseFloat(activity.amount.replace(/,/g, '')))
+        const allocated = award.activities.map(activity => parseFloat(activity.amount))
         return '$' + allocated.reduce((a, b) => a + b, 0).toLocaleString('en')
       }
     },
